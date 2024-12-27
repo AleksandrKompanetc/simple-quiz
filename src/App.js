@@ -12,6 +12,7 @@ function Result() {
 function App() {
   return (
     <div className="App">
+      <Game />
       <Result />
     </div>
   );
