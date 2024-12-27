@@ -3,12 +3,14 @@ import './App.css';
 function Game() {
   return (
     <>
-    <div className='progress'></div>
+    <div className='progress'>
+      <div style={{width: '50%'}} className=''></div>
+    </div>
     <h1>What is useState?</h1>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>This is a function for storing data</li>
+      <li>This is a global state</li>
+      <li>This is something from React</li>
     </ul>
     </>
   )
