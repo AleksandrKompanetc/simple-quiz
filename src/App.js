@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import './App.css';
 
 const questions = [
@@ -23,17 +24,17 @@ const questions = [
   }
 ]
 
-function Game() {
+function Game({question}) {
   return (
     <div className='game-container'>
       <div className='progress'>
         <div style={{ width: '50%' }} className='progress-bar'></div>
       </div>
-      <h1 className='game-header'>What is useState?</h1>
+      <h1 className='game-header'>{question.title}</h1>
       <ul className='game-list'>
-        <li>This is a function for storing data</li>
-        <li>This is a global state</li>
-        <li>This is something from React</li>
+        {question.variants.map((text) => (
+          <li key={text}>{text}</li>
+        ) )}
       </ul>
     </div>
   )
@@ -50,10 +51,13 @@ function Result() {
 }
 
 function App() {
+  const [step, setStep] = useState(0);
+  const question = questions[step];
+
   return (
     <div className="app">
-      {/* <Game /> */}
-      <Result />
+      <Game question={question} />
+      {/* <Result /> */}
     </div>
   );
 }
