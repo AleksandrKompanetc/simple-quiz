@@ -116,4 +116,16 @@
   text-align: center;
 }
 
+.result-button {
+  padding: 8px 28px;
+  background-color: rgb(243, 188, 86);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
 
+.result-button:hover {
+  background-color: rgb(245, 177, 50);
+}
