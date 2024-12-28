@@ -1,5 +1,28 @@
 import './App.css';
 
+const questions = [
+  {
+    title: 'React - it is ... ?',
+    variants: ['library', 'framework', 'application'],
+    correct: 0,
+  },
+  {
+    title: 'Component - it is ... ?',
+    variants: ['application', 'path of the application', 'function'],
+    correct: 1,
+  },
+  {
+    title: 'What is JSX?',
+    variants: ['programming language', 'function', 'language extension'],
+    correct: 2,
+  },
+  {
+    title: 'What is JavaScript?',
+    variants: ['tag', 'framework', 'programming language'],
+    correct: 2,
+  }
+]
+
 function Game() {
   return (
     <div className='game-container'>
