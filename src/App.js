@@ -41,9 +41,10 @@ function Game() {
 
 function Result() {
   return (
-    <div className='result'>
-      <h2>You guessed three answers out of ten</h2>
-      <button>Try again</button>
+    <div className='result-container'>
+      <img src="./congrat.png" alt="" />
+      <h2 className='result-header'>You guessed three answers out of ten</h2>
+      <button className='result-button'>Try again</button>
     </div>
   )
 }
@@ -51,8 +52,8 @@ function Result() {
 function App() {
   return (
     <div className="app">
-      <Game />
-      {/* <Result /> */}
+      {/* <Game /> */}
+      <Result />
     </div>
   );
 }
