@@ -57,7 +57,10 @@ function App() {
   const question = questions[step];
 
   const onClickVariant = (index) => {
-    setStep(step + 1)
+    setStep(step + 1);
+
+    if (index === question.correct) 
+      setCorrect(correct + 1);
   }
 
   return (
