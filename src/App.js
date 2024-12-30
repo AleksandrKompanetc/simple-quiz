@@ -41,11 +41,11 @@ function Game({step, question, onClickVariant}) {
   )
 }
 
-function Result() {
+function Result({correct}) {
   return (
     <div className='result-container'>
       <img src="./congrat.png" alt="" />
-      <h2 className='result-header'>You guessed three answers out of ten</h2>
+      <h2 className='result-header'>You guessed {correct} answers out of {questions.length} </h2>
       <button className='result-button'>Try again</button>
     </div>
   )
@@ -59,8 +59,9 @@ function App() {
   const onClickVariant = (index) => {
     setStep(step + 1);
 
-    if (index === question.correct) 
+    if (index === question.correct) {
       setCorrect(correct + 1);
+    }
   }
 
   return (
@@ -68,7 +69,7 @@ function App() {
       {step !== questions.length ? (
         <Game step={step} question={question} onClickVariant={onClickVariant} />
       ) : (
-        <Result />
+        <Result correct={correct} />
       )} 
       {/* <Game step={step} question={question} onClickVariant={onClickVariant} /> */}
       {/* <Result /> */}
