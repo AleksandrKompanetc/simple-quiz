@@ -46,7 +46,9 @@ function Result({correct}) {
     <div className='result-container'>
       <img src="./congrat.png" alt="" />
       <h2 className='result-header'>You guessed {correct} answers out of {questions.length} </h2>
-      <button className='result-button'>Try again</button>
+      <a href="/">
+        <button className='result-button'>Try again</button>
+      </a>
     </div>
   )
 }
